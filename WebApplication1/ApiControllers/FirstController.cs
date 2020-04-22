@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using ClassLibrary2;
 namespace WebApplication1.ApiControllers
 {
     public class FirstController : ApiController
@@ -12,7 +12,8 @@ namespace WebApplication1.ApiControllers
         [HttpGet]
         public int getFirst(int id)
         {
-            return id;
+            Class1 class1 = new Class1();
+            return class1.FirstSql();
         }
         [HttpPost]
         public string PostFirst(string name,string sex)
